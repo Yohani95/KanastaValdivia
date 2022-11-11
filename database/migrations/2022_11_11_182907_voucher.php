@@ -13,9 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('subCategories', function (Blueprint $table) {
+        Schema::create('voucher', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('total');
+            $table->bigInteger('id_rut');
             $table->timestamps();
         });
     }

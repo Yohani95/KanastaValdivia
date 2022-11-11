@@ -18,6 +18,13 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('categories_id')->unsigned();
             $table->string('name');
+            $table->string('description');
+            $table->string('bar_code');
+            $table->bigInteger('price');
+            $table->integer('stock');
+            $table->bigInteger('id_Sales');
+            $table->bigInteger('id_voucher');
+            $table->string('ruta_image');
             $table->timestamps();
             $table->foreign('categories_id')->references('id')->on('categories')->ondelete("cascade");
         });

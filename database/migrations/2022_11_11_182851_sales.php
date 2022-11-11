@@ -13,9 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('subCategories', function (Blueprint $table) {
+        Schema::create('sales', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('direcction');
+            $table->string('phone');
             $table->timestamps();
         });
     }

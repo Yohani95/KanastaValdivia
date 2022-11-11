@@ -89,7 +89,6 @@ class ProductController extends Controller
         request()->validate(Product::$rules);
 
         $product->update($request->all());
-
         return redirect()->route('products.index')
             ->with('success', 'Product updated successfully');
     }

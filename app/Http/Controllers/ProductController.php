@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Category;
+use App\Models\Sale;
 use Illuminate\Http\Request;
 
 /**
@@ -19,7 +21,6 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::paginate();
-
         return view('product.index', compact('products'))
             ->with('i', (request()->input('page', 1) - 1) * $products->perPage());
     }
@@ -32,7 +33,9 @@ class ProductController extends Controller
     public function create()
     {
         $product = new Product();
-        return view('product.create', compact('product'));
+        $categories = Category::pluck('name','id');
+        $sales= Sale::pluck('name','id');
+        return view('product.create', compact('product','categories','sales'));
     }
 
     /**
@@ -73,8 +76,9 @@ class ProductController extends Controller
     public function edit($id)
     {
         $product = Product::find($id);
-
-        return view('product.edit', compact('product'));
+        $categories = Category::pluck('name','id');
+        $sales= Sale::pluck('name','id');
+        return view('product.edit', compact('product','categories','sales'));
     }
 
     /**

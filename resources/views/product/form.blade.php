@@ -3,7 +3,7 @@
         
         <div class="form-group">
             {{ Form::label('categories_id') }}
-            {{ Form::text('categories_id', $product->categories_id, ['class' => 'form-control' . ($errors->has('categories_id') ? ' is-invalid' : ''), 'placeholder' => 'Categories Id']) }}
+            {{ Form::select('categories_id',$categories ,$product->categories_id, ['class' => 'form-control' . ($errors->has('categories_id') ? ' is-invalid' : ''), 'placeholder' => 'Seleccionar Categoria']) }}
             {!! $errors->first('categories_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
@@ -33,7 +33,7 @@
         </div>
         <div class="form-group">
             {{ Form::label('id_Sales') }}
-            {{ Form::text('id_Sales', $product->id_Sales, ['class' => 'form-control' . ($errors->has('id_Sales') ? ' is-invalid' : ''), 'placeholder' => 'Id Sales']) }}
+            {{ Form::select('id_Sales',$sales, $product->id_Sales, ['class' => 'form-control' . ($errors->has('id_Sales') ? ' is-invalid' : ''), 'placeholder' => 'Id Sales']) }}
             {!! $errors->first('id_Sales', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">

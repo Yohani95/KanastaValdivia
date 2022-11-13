@@ -18,15 +18,23 @@ class HomeClientController extends Controller
 
     public function show(Request $request)
     {
-        return $request::all();
-        $result=$request->input('buscar');
-        dd($result);
-        $request->validate([
-            'buscarProducto' =>'required'
-        ]);
-        dd($request->input('buscarProducto'));
-        $product = Product::wherein($request);
+        
+        // return $request::all();
+        // $result=$request->input('buscar');
+        // dd($result);
+        // $request->validate([
+        //     'buscarProducto' =>'required'
+        // ]);
+        // dd($request->input('buscarProducto'));
+        // $result=$request->name;
+        // $products = Product::where('name','like','%'.$result.'%');
+        // //dd($products->get());
+        // return redirect('HomeClients.show', compact('products'));
+    }
+    public function indexShow(Request $request)
+    {
 
-        return view('show', compact('product'));
+        $products = Product::paginate()->where('name','like',$request->name);
+        return view('HomeClients.show', compact('products'));
     }
 }

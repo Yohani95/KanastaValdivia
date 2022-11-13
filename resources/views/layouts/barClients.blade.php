@@ -12,14 +12,15 @@
                     <div class="col-md-9 header mt-4 mb-md-0 mb-4">
                         <div class="row">
                             <!-- search -->
-                            <form class="d-flex" role="search" action="{{route('homeClientshow')}}" method="POST">
-                              @csrf
-                              <input class="form-control me-2" id="buscar" name="buscar" type="search" placeholder="Buscar Producto ..." aria-label="Search">
-                              <a class="btn btn-outline-success" href="{{ route('homeClientshow') }} " type="submit">
-                                <i class="fa fa-fw fa-eye"></i> 
-                                Buscar
-                              </a>
-                            </form>
+                            {{ Form::open(['route' => 'homeClientshow.index', 'method' => 'GET', 'class' => 'form-inline pull-right']) }}
+                              <div class="form-group">
+                                {{ Form::text('name', null, ['class' => 'form-control me-2', 'placeholder' => 'Buscar Producto ...']) }}
+                                {!! $errors->first('name', '<div class="invalid-feedback">:message</div>') !!}
+                              </div>
+                                <div class="pull-right">
+                                <button class="btn btn-outline-success pull-right" type="submit">Buscar</button>
+                                  </div>
+                                {{ Form::close() }}
                             <!-- //search -->
                             <!-- cart details -->
                             <div class="col-2 top_nav_right text-center mt-sm-0 mt-2">

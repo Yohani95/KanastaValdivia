@@ -2,7 +2,6 @@
 
 @section('content')
 @include('layouts.barClients')
-@include('carrusel.carrusel')
 <div class="container-fluid">
     <div class="row p-2  white-text">
     @foreach ($products as $product)

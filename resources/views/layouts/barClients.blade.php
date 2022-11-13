@@ -17,7 +17,7 @@
                                 {{ Form::text('name', null, ['class' => 'form-control me-2', 'placeholder' => 'Buscar Producto ...']) }}
                                 {!! $errors->first('name', '<div class="invalid-feedback">:message</div>') !!}
                               </div>
-                                <div class="pull-right">
+                                <div class="d-grid gap-2 col-6 mx-auto m-2" >
                                 <button class="btn btn-outline-success pull-right" type="submit">Buscar</button>
                                   </div>
                                 {{ Form::close() }}

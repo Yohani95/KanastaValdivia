@@ -16,10 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [App\Http\Controllers\HomeClientController::class, 'index'])->name('homeClient');
 Route::get('/showClient', [App\Http\Controllers\HomeClientController::class, 'indexShow'])->name('homeClientshow.index');
 //Route::post('/showClient/search', [App\Http\Controllers\HomeClientController::class, 'show'])->name('homeClientshow.post');
-// Route::group(['middleware' => 'auth'], function () {
-
-// });
-Auth::routes();
+Route::group(['middleware' => 'auth'], function () {
+    Auth::routes();
+});
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('products',App\Http\Controllers\ProductController::class);

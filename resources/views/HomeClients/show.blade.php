@@ -4,9 +4,6 @@
 @include('layouts.barClients')
 <div class="container-fluid">
     <div class="row p-2  white-text">
-    @if($products==null)
-        no encontrado
-    @endif
     @foreach ($products as $product)
     <div class="col-xs-12 col-md-6  col-lg-4 container">
             <p class="h4">{{ $product->name }}</p>
@@ -44,7 +41,5 @@
         @endforeach
     </div>
 </div>
-<script>
-
-</script>
 @endsection
+

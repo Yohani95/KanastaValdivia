@@ -41,14 +41,25 @@
             {{ Form::text('id_voucher', $product->id_voucher, ['class' => 'form-control' . ($errors->has('id_voucher') ? ' is-invalid' : ''), 'placeholder' => 'Id Voucher']) }}
             {!! $errors->first('id_voucher', '<div class="invalid-feedback">:message</div>') !!}
         </div>
-        <div class="form-group">
+            @if (url()->current()=='http://127.0.0.1:8000/products/create')
+                <div class="form-group">
             {{ Form::label('ruta_image') }}
-            {{ Form::text('ruta_image', $product->ruta_image, ['class' => 'form-control' . ($errors->has('ruta_image') ? ' is-invalid' : ''), 'placeholder' => 'Ruta Image']) }}
+            <br>
+            {{ Form::file('ruta_image', ['class' => 'form-control' . ($errors->has('ruta_image') ? ' is-invalid' : ''), 'placeholder' => 'Ruta Image']) }}
             {!! $errors->first('ruta_image', '<div class="invalid-feedback">:message</div>') !!}
         </div>
+            @else
+            <div class="form-group">
+            {{ Form::label('ruta_image') }}
+            {{ Form::file('ruta_image', ['class' => 'form-control' . ($errors->has('ruta_image') ? ' is-invalid' : ''), 'placeholder' => 'Ruta Image']) }}
+            {!! $errors->first('ruta_image', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
+            @endif
+        <br>
 
     </div>
-    <div class="box-footer mt20">
+    <div class="box-footer mt20 container-center">
         <button type="submit" class="btn btn-primary">Submit</button>
+                            <a class="btn btn-danger" href="{{ route('products.index') }}"> Back</a>
     </div>
 </div>

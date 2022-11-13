@@ -53,8 +53,9 @@
                             {{ $product->id_voucher }}
                         </div>
                         <div class="form-group">
-                            <strong>Ruta Image:</strong>
-                            {{ $product->ruta_image }}
+                            <strong> Image:</strong>
+                            <br>
+                            <img src="{{asset($product->ruta_image)}}" class=" img-fluid img-thumbnail" width="200px">
                         </div>
 
                     </div>

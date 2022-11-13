@@ -54,7 +54,7 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $product->categories_id }}</td>
+											<td>{{ $product->category->name }}</td>
 											<td>{{ $product->name }}</td>
 											<td>{{ $product->description }}</td>
 											<td>{{ $product->bar_code }}</td>
@@ -62,7 +62,9 @@
 											<td>{{ $product->stock }}</td>
 											<td>{{ $product->id_Sales }}</td>
 											<td>{{ $product->id_voucher }}</td>
-											<td>{{ $product->ruta_image }}</td>
+											<td>
+                                                <img src="{{$product->ruta_image}}" class="img-fluid img-thumbnail" width="100px">
+                                            </td>
 
                                             <td>
                                                 <form action="{{ route('products.destroy',$product->id) }}" method="POST">

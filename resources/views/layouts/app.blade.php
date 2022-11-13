@@ -28,7 +28,7 @@
                 </a>
                 @else
                 <a class="navbar-brand" href="{{ url('/') }}" style="color:crimson">
-                   <- Volver
+                   - Volver
                 </a>
             @endauth
             @endif

@@ -6,7 +6,7 @@
   </div>
   <div class="carousel-inner" style="width:100%; max-height:300px;">
     <div class="carousel-item active">
-      <img src="/storage/images/b1.jpg" class="d-block w-100" alt="50%">
+    <img src="public/images/products/1668292847-mm3.jpg" class="d-block w-100">
     </div>
     <div class="carousel-item">
       <img src="https://t1.uc.ltmcdn.com/es/posts/4/0/5/cuales_son_las_frutas_de_invierno_7504_orig.jpg" class="d-block w-100" alt="...">

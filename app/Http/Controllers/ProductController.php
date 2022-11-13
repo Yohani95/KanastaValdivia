@@ -6,6 +6,7 @@ use App\Models\Product;
 use App\Models\Category;
 use App\Models\Sale;
 use Illuminate\Http\Request;
+use \Illuminate\Http\Post;
 
 /**
  * Class ProductController
@@ -46,12 +47,28 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+      
         request()->validate(Product::$rules);
-
-        $product = Product::create($request->all());
+        $product=new Product();
+        if($request->hasfile('ruta_image')){
+            $file=$request->file('ruta_image');
+            $destinationPath='images/products/';
+            $filename=time().'-' . $file->getClientOriginalName();
+            $file->move($destinationPath,$filename);
+        }
+        $product->name=$request->name;
+        $product->categories_id=$request->categories_id;
+        $product->description=$request->description;
+        $product->bar_code=$request->bar_code;
+        $product->price=$request->price;
+        $product->stock=$request->stock;
+        $product->id_sales=$request->id_Sales;
+        $product->id_voucher=$request-> id_voucher;
+        $product->ruta_image=$destinationPath.$filename;
+        $product->save();
 
         return redirect()->route('products.index')
-            ->with('success', 'Product created successfully.');
+            ->with('success', 'Producto creado correctamente.');
     }
 
     /**
@@ -91,8 +108,22 @@ class ProductController extends Controller
     public function update(Request $request, Product $product)
     {
         request()->validate(Product::$rules);
-
-        $product->update($request->all());
+        if($request->hasfile('ruta_image')){
+            $file=$request->file('ruta_image');
+            $destinationPath='images/products/';
+            $filename=time().'-' . $file->getClientOriginalName();
+            $file->move($destinationPath,$filename);
+        }
+        $product->name=$request->name;
+        $product->categories_id=$request->categories_id;
+        $product->description=$request->description;
+        $product->bar_code=$request->bar_code;
+        $product->price=$request->price;
+        $product->stock=$request->stock;
+        $product->id_sales=$request->id_Sales;
+        $product->id_voucher=$request-> id_voucher;
+        $product->ruta_image=$destinationPath.$filename;
+        $product->update();
         return redirect()->route('products.index')
             ->with('success', 'Product updated successfully');
     }

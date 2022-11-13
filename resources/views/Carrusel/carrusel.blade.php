@@ -6,13 +6,13 @@
   </div>
   <div class="carousel-inner" style="width:100%; max-height:300px;">
     <div class="carousel-item active">
-    <img src="public/images/products/1668292847-mm3.jpg" class="d-block w-100">
+    <img src="{{asset('images/b1.jpg')}}" class="d-block w-100">
     </div>
     <div class="carousel-item">
-      <img src="https://t1.uc.ltmcdn.com/es/posts/4/0/5/cuales_son_las_frutas_de_invierno_7504_orig.jpg" class="d-block w-100" alt="...">
+      <img src="{{asset('images/b3.jpg')}}" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="https://t1.uc.ltmcdn.com/es/posts/4/0/5/cuales_son_las_frutas_de_invierno_7504_orig.jpg" class="d-block w-100" alt="...">
+      <img src="{{asset('images/b4.jpg')}}" class="d-block w-100" alt="...">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

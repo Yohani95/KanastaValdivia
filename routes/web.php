@@ -17,12 +17,11 @@ Route::get('/', [App\Http\Controllers\HomeClientController::class, 'index'])->na
 Route::get('/showClient', [App\Http\Controllers\HomeClientController::class, 'indexShow'])->name('homeClientshow.index');
 //Route::post('/showClient/search', [App\Http\Controllers\HomeClientController::class, 'show'])->name('homeClientshow.post');
 Route::group(['middleware' => 'auth'], function () {
-    Auth::routes();
-});
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::resource('products',App\Http\Controllers\ProductController::class);
+    Route::resource('products',App\Http\Controllers\ProductController::class);
 Route::resource('categories',App\Http\Controllers\CategoryController::class);
 Route::resource('sales',App\Http\Controllers\SaleController::class);
+});
+Auth::routes();
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('voucher',App\Http\Controllers\VoucherController::class);
 Route::resource('details',App\Http\Controllers\DetailController::class);

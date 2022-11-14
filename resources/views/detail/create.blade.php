@@ -13,7 +13,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Create Detail</span>
+                        <span class="card-title">Crear detalle</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('details.store') }}"  role="form" enctype="multipart/form-data">

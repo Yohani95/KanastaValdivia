@@ -13,12 +13,12 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Detail') }}
+                                {{ __('Detalle') }}
                             </span>
 
                              <div class="float-right">
                                 <a href="{{ route('details.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('Crear nuevo') }}
                                 </a>
                               </div>
                         </div>
@@ -37,9 +37,9 @@
                                         <th>No</th>
                                         
 										<th>Id Voucher</th>
-										<th>Name Product</th>
+										<th>Nombre Producto</th>
 										<th>Quantity</th>
-										<th>Unit Price</th>
+										<th>Precio Unitario</th>
 
                                         <th></th>
                                     </tr>

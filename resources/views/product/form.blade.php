@@ -2,12 +2,12 @@
     <div class="box-body">
         
         <div class="form-group">
-            {{ Form::label('categoria') }}
+            {{ Form::label('categories_id') }}
             {{ Form::select('categories_id',$categories ,$product->categories_id, ['class' => 'form-control' . ($errors->has('categories_id') ? ' is-invalid' : ''), 'placeholder' => 'Seleccionar Categoria']) }}
             {!! $errors->first('categories_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('Nombre') }}
+            {{ Form::label('name') }}
             {{ Form::text('name', $product->name, ['class' => 'form-control' . ($errors->has('name') ? ' is-invalid' : ''), 'placeholder' => 'Name']) }}
             {!! $errors->first('name', '<div class="invalid-feedback">:message</div>') !!}
         </div>

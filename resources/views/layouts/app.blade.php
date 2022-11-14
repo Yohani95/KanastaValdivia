@@ -42,13 +42,13 @@
         @auth
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('products.index') }}">{{ __('products') }}</a>
+                            <a class="nav-link" href="{{ route('products.index') }}">{{ __('productos') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('categories.index') }}">{{ __('category') }}</a>
+                            <a class="nav-link" href="{{ route('categories.index') }}">{{ __('categorias') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('sales.index') }}">{{ __('sales') }}</a>
+                            <a class="nav-link" href="{{ route('sales.index') }}">{{ __('Tiendas') }}</a>
                         </li>
                     </ul>
                     @endauth
@@ -60,13 +60,13 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('acceso') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Registrar') }}</a>
                                 </li>
                             @endif
                         @else

@@ -52,11 +52,11 @@
 
                                             <td>
                                                 <form action="{{ route('vouchers.destroy',$voucher->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('vouchers.show',$voucher->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('vouchers.edit',$voucher->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('vouchers.show',$voucher->id) }}"><i class="fa fa-fw fa-eye"></i> ver</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('vouchers.edit',$voucher->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Eliminar</button>
                                                 </form>
                                             </td>
                                         </tr>

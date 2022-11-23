@@ -2,8 +2,8 @@
     <div class="box-body">
         
         <div class="form-group">
-            {{ Form::label('nombre') }}
-            {{ Form::text('nombre', $sale->name, ['class' => 'form-control' . ($errors->has('name') ? ' is-invalid' : ''), 'placeholder' => 'Name']) }}
+            {{ Form::label('name') }}
+            {{ Form::text('name', $sale->name, ['class' => 'form-control' . ($errors->has('name') ? ' is-invalid' : ''), 'placeholder' => 'Name']) }}
             {!! $errors->first('name', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
@@ -12,8 +12,8 @@
             {!! $errors->first('direcction', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('telefono') }}
-            {{ Form::text('telefono', $sale->phone, ['class' => 'form-control' . ($errors->has('phone') ? ' is-invalid' : ''), 'placeholder' => 'Phone']) }}
+            {{ Form::label('phone') }}
+            {{ Form::text('phone', $sale->phone, ['class' => 'form-control' . ($errors->has('phone') ? ' is-invalid' : ''), 'placeholder' => 'Phone']) }}
             {!! $errors->first('phone', '<div class="invalid-feedback">:message</div>') !!}
         </div>
 

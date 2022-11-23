@@ -48,7 +48,7 @@ class VoucherController extends Controller
         $voucher = Voucher::create($request->all());
 
         return redirect()->route('vouchers.index')
-            ->with('success', 'Voucher created successfully.');
+            ->with('success', 'Voucher creado.');
     }
 
     /**
@@ -91,7 +91,7 @@ class VoucherController extends Controller
         $voucher->update($request->all());
 
         return redirect()->route('vouchers.index')
-            ->with('success', 'Voucher updated successfully');
+            ->with('success', 'Voucher actualizado');
     }
 
     /**
@@ -104,6 +104,6 @@ class VoucherController extends Controller
         $voucher = Voucher::find($id)->delete();
 
         return redirect()->route('vouchers.index')
-            ->with('success', 'Voucher deleted successfully');
+            ->with('success', 'Voucher eliminado');
     }
 }

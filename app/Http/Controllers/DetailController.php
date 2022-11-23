@@ -48,7 +48,7 @@ class DetailController extends Controller
         $detail = Detail::create($request->all());
 
         return redirect()->route('details.index')
-            ->with('success', 'Detail created successfully.');
+            ->with('success', 'Detalle creado.');
     }
 
     /**
@@ -91,7 +91,7 @@ class DetailController extends Controller
         $detail->update($request->all());
 
         return redirect()->route('details.index')
-            ->with('success', 'Detail updated successfully');
+            ->with('success', 'Detalle actualizado');
     }
 
     /**
@@ -104,6 +104,6 @@ class DetailController extends Controller
         $detail = Detail::find($id)->delete();
 
         return redirect()->route('details.index')
-            ->with('success', 'Detail deleted successfully');
+            ->with('success', 'Detalle eliminado');
     }
 }

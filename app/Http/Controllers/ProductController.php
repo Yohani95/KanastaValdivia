@@ -125,7 +125,7 @@ class ProductController extends Controller
         $product->ruta_image=$destinationPath.$filename;
         $product->update();
         return redirect()->route('products.index')
-            ->with('success', 'Product updated successfully');
+            ->with('success', 'Producto actualizado');
     }
 
     /**
@@ -138,6 +138,6 @@ class ProductController extends Controller
         $product = Product::find($id)->delete();
 
         return redirect()->route('products.index')
-            ->with('success', 'Product deleted successfully');
+            ->with('success', 'Producto eliminado');
     }
 }

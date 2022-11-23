@@ -3,17 +3,17 @@
         
         <div class="form-group">
             {{ Form::label('nombre') }}
-            {{ Form::text('nombre', $sale->name, ['class' => 'form-control' . ($errors->has('name') ? ' is-invalid' : ''), 'placeholder' => 'Nombre']) }}
+            {{ Form::text('nombre', $sale->name, ['class' => 'form-control' . ($errors->has('name') ? ' is-invalid' : ''), 'placeholder' => 'Name']) }}
             {!! $errors->first('name', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('direccion') }}
-            {{ Form::text('direccion ', $sale->direcction, ['class' => 'form-control' . ($errors->has('direcction') ? ' is-invalid' : ''), 'placeholder' => 'Direreccion']) }}
+            {{ Form::label('direcction') }}
+            {{ Form::text('direcction', $sale->direcction, ['class' => 'form-control' . ($errors->has('direcction') ? ' is-invalid' : ''), 'placeholder' => 'Direcction']) }}
             {!! $errors->first('direcction', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('telefono') }}
-            {{ Form::text('telefono', $sale->phone, ['class' => 'form-control' . ($errors->has('phone') ? ' is-invalid' : ''), 'placeholder' => 'telefono']) }}
+            {{ Form::text('telefono', $sale->phone, ['class' => 'form-control' . ($errors->has('phone') ? ' is-invalid' : ''), 'placeholder' => 'Phone']) }}
             {!! $errors->first('phone', '<div class="invalid-feedback">:message</div>') !!}
         </div>
 

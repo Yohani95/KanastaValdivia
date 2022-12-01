@@ -52,9 +52,6 @@
       <li class="nav-item">
           <a class="nav-link active" href="{{ url('/') }}" style="color:crimson">Inicio</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Categorias
@@ -62,13 +59,10 @@
           <ul class="dropdown-menu">
           @foreach ($products as $product)
             <li><a class="dropdown-item" href="#">{{$product->category->name}}</a></li>
-            @endforeach
+            @endforeach 
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
+            
+          </ul> 
         </li>
         @if (Route::has('login'))
         <li class="nav-item">

@@ -36,6 +36,7 @@
                         </div>
                 </p>
                  <a href="{{asset($product->ruta_image)}}" class="btn btn-primary">Ver Producto</a>
+                 <a href="{{asset($product->ruta_image)}}" class="btn btn-primary">Agregar al carro</a>
                 </div>
             </div>
         </div>

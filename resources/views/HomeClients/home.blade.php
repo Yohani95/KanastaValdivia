@@ -3,6 +3,7 @@
 @section('content')
 @include('layouts.barClients')
 @include('carrusel.carrusel')
+<a href="{{asset($product->ruta_image)}}" class="btn btn-primary">Agregar al carro</a>
 <div class="container-fluid">
     <div class="row p-2  white-text">
     @foreach ($products as $product)

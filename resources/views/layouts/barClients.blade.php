@@ -19,13 +19,14 @@
                               </div>
                                 <div class="d-grid gap-2 col-6 mx-auto m-2" >
                                 <button class="btn btn-outline-success pull-right" type="submit">Buscar</button>
+                                
                                   </div>
                                 {{ Form::close() }}
                             <!-- //search -->
                             <!-- cart details -->
                             <div class="col-2 top_nav_right text-center mt-sm-0 mt-2">
                                 <div class="wthreecartaits wthreecartaits2 cart cart box_1">
-                                    <form action="" method="post" class="last">
+                                    <form action="#" method="post" class="last">
                                         <input type="hidden" name="cmd" value="_cart">
                                         <input type="hidden" name="display" value="1">
                                         <button class="btn w3view-cart" type="submit" name="submit" value="">

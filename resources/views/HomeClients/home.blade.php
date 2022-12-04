@@ -36,15 +36,26 @@
                             {{ $product->stock }}
                         </div>
                         </p>
-                 <a href="{{asset($product->ruta_image)}}" class="btn btn-primary">Ver Producto</a>
-                 <br>
-                 <br>
-                 <a href="{{asset($product->ruta_image)}}" class="btn btn-primary">Agregar al carro</a>
-               
+                        <form action="{{ route('cart.store') }}" method="POST">
+                            {{ csrf_field() }}
+                            <input type="hidden" class="form-control" value="{{ $product->id }}" id="id" name="id">                            
+                            <input type="hidden" class="form-control" value="{{ $product->name }}" id="name" name="name">
+                            <input type="hidden" class="form-control" value="{{ $product->price }}" id="price" name="price">
+                            <input type="hidden" class="form-control" value="{{ $product->ruta_image }}" id="img" name="img">
+                            <input type="hidden" class="form-control" value="{{ $product->bar_code }}" id="slug" name="slug">
+                            <input type="hidden" value="1" id="quantity" name="quantity">
+                        <div class="row " >
+                            <div class="col-lg-6"><a href="{{asset($product->ruta_image)}}" class="btn btn-primary text-center btn-sm">Ver Producto</a></div>
+                            <div class="col-lg-6">
+                                <button type="submit" class="btn btn-outline-success fa-beat btn-sm">Agregar carrito</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
         @endforeach
     </div>
 </div>
+
 @endsection

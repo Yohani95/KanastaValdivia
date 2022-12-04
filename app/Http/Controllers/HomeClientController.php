@@ -12,7 +12,8 @@ class HomeClientController extends Controller
     public function index()
     {
         $products = Product::paginate();
-        return view('HomeClients.home', compact('products'))
+        $categories = Category::all();
+        return view('HomeClients.home', compact('products','categories'))
             ->with('i', (request()->input('page', 1) - 1) * $products->perPage());
     }
 
@@ -35,6 +36,6 @@ class HomeClientController extends Controller
     {
 
         $products = Product::paginate()->where('name','like',$request->name);
-        return view('HomeClients.show', compact('products'));
+        return view('HomeClients.show', compact('products','categories'));
     }
 }

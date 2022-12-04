@@ -23,19 +23,6 @@
                                   </div>
                                 {{ Form::close() }}
                             <!-- //search -->
-                            <!-- cart details -->
-                            <div class="col-2 top_nav_right text-center mt-sm-0 mt-2">
-                                <div class="wthreecartaits wthreecartaits2 cart cart box_1">
-                                    <form action="#" method="post" class="last">
-                                        <input type="hidden" name="cmd" value="_cart">
-                                        <input type="hidden" name="display" value="1">
-                                        <button class="btn w3view-cart" type="submit" name="submit" value="">
-                                            <i class="fas fa-cart-arrow-down"></i>
-                                        </button>
-                                    </form>
-                                </div>
-                            </div>
-                            <!-- //cart details -->
                         </div>
                     </div>
                 </div>
@@ -58,8 +45,8 @@
             Categorias
           </a>
           <ul class="dropdown-menu">
-          @foreach ($products as $product)
-            <li><a class="dropdown-item" href="#">{{$product->category->name}}</a></li>
+          @foreach ($categories as $category)
+            <li><a class="dropdown-item" href="#">{{$category->name}}</a></li>
             @endforeach 
             <li><hr class="dropdown-divider"></li>
             
@@ -79,11 +66,25 @@
                         @endif
                     @endauth
         </li>
+          <li class="nav-item m-2">
+            <a href="nav-link" style="text-decoration: none;">
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown" class="nav-link dropdown-toggle"
+                   href="#" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false"
+                >
+                    <span class="" style="color: #e03131;">
+                        <i class="fa-duotone fas fa-cart-arrow-down fa-bounce" style="color: #e03131;"></i> {{ \Cart::getTotalQuantity()}}
+                    </span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" style="width: 450px; padding: 0px; ">
+                    <ul class="list-group" style="margin: 20px;">
+                        @include('HomeClients.cart-drop')
+                    </ul>
+                </div>
+            </li>
         @endif
       </ul>
-
-         
-      
     </div>
   </div>
  </div>

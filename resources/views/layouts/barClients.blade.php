@@ -74,7 +74,7 @@
                    aria-haspopup="true" aria-expanded="false"
                 >
                     <span class="" style="color: #e03131;">
-                        <i class="fa-duotone fas fa-cart-arrow-down fa-bounce" style="color: #e03131;"></i> {{ \Cart::getTotalQuantity()}}
+                        <i class="fa-duotone fas fa-cart-arrow-down" style="color: #e03131;"></i> {{ \Cart::getTotalQuantity()}}
                     </span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" style="width: 450px; padding: 0px; ">

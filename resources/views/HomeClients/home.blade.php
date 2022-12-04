@@ -47,7 +47,7 @@
                         <div class="row " >
                             <div class="col-lg-6"><a href="{{asset($product->ruta_image)}}" class="btn btn-primary text-center btn-sm">Ver Producto</a></div>
                             <div class="col-lg-6">
-                                <button type="submit" class="btn btn-outline-success fa-beat btn-sm">Agregar carrito</button>
+                                <button type="submit" class="btn btn-outline-success btn-sm">Agregar carrito</button>
                             </div>
                         </div>
                     </form>

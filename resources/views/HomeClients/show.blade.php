@@ -43,9 +43,6 @@
                                     <form action="#" method="post" class="last">
                                         <input type="hidden" name="cmd" value="_cart">
                                         <input type="hidden" name="display" value="1">
-                                        <button class="btn w3view-cart" type="submit" name="submit" value="">
-                                            <i class="fas fa-cart-arrow-down"></i>
-                                        </button>
                                     </form>
                                 </div>
                             </div>

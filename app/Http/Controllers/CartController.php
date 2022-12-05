@@ -24,7 +24,7 @@ class CartController extends Controller
     }
     public function remove(Request $request){
         \Cart::remove($request->id);
-        return redirect()->route('cart.index')->with('success_msg', 'Item Eliminado!');
+        return redirect()->route('cart.index')->with('success_msg', 'Item Eliminado');
     }
 
     public function add(Request $request){
@@ -39,7 +39,7 @@ class CartController extends Controller
             )
         ));
         $categories = Category::all();
-        return redirect()->route('cart.index')->with('success_msg', 'Item Agregado a sú Carrito!');
+        return redirect()->route('cart.index')->with('success_msg', 'Item Agregado a su Carrito!');
     }
 
     public function update(Request $request){
@@ -50,12 +50,12 @@ class CartController extends Controller
                     'value' => $request->quantity
                 ),
         ));
-        return redirect()->route('cart.index')->with('success_msg', 'Carrito Actualizado!');
+        return redirect()->route('cart.index')->with('success_msg', 'Carrito Actualizado');
     }
 
     public function clear(){
         \Cart::clear();
-        return redirect()->route('cart.index')->with('success_msg', 'Carrito Limpio!');
+        return redirect()->route('cart.index')->with('success_msg', 'Carrito Limpio');
     }
 
 }

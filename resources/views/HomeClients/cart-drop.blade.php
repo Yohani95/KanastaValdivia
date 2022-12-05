@@ -42,5 +42,5 @@
         </a>
     </div>
 @else
-    <li class="list-group-item">Tu carrito esta vacío</li>
+    <li class="list-group-item">Tu carrito esta vacio</li>
 @endif

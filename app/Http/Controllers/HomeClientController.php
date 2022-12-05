@@ -36,6 +36,7 @@ class HomeClientController extends Controller
     {
 
         $products = Product::paginate()->where('name','like',$request->name);
+        $categories = Category::all();
         return view('HomeClients.show', compact('products','categories'));
     }
 }

@@ -93,7 +93,7 @@
                         </ul>
                     </div>
                     <br><a href="/" class="btn btn-outline-primary">Continue en la tienda</a>
-                    <a href="/checkout" class="btn btn-success">Proceder al Checkout</a>
+                    
                 </div>
             @endif
         </div>

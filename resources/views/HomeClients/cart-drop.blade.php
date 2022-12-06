@@ -37,9 +37,7 @@
         <a class="btn btn-outline-primary btn-sm m-2" href="{{ route('cart.index') }}">
             CARRITO <i class="fa fa-arrow-right"></i>
         </a>
-        <a class="btn btn-outline-success btn-sm m-2" href="">
-            CHECKOUT <i class="fa fa-arrow-right"></i>
-        </a>
+        
     </div>
 @else
     <li class="list-group-item">Tu carrito esta vacio</li>

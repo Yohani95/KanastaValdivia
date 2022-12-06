@@ -36,15 +36,15 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Categories Id</th>
-										<th>Name</th>
-										<th>Description</th>
-										<th>Bar Code</th>
-										<th>Price</th>
+										<th>Categoria id</th>
+										<th>Nombre</th>
+										<th>Descripción</th>
+										<th>Codigo barra</th>
+										<th>Precio</th>
 										<th>Stock</th>
-										<th>Id Sales</th>
+										<th>Id tienda</th>
 										<th>Id Voucher</th>
-										<th>Ruta Image</th>
+										<th>Ruta Imagen</th>
 
                                         <th></th>
                                     </tr>

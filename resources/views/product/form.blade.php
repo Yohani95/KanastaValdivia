@@ -2,27 +2,27 @@
     <div class="box-body">
         
         <div class="form-group">
-            {{ Form::label('categories_ikd') }}
+            {{ Form::label('categoria_id') }}
             {{ Form::select('categories_id',$categories ,$product->categories_id, ['class' => 'form-control' . ($errors->has('categories_id') ? ' is-invalid' : ''), 'placeholder' => 'Seleccionar Categoria']) }}
             {!! $errors->first('categories_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('name') }}
+            {{ Form::label('nombre') }}
             {{ Form::text('name', $product->name, ['class' => 'form-control' . ($errors->has('name') ? ' is-invalid' : ''), 'placeholder' => 'Name']) }}
             {!! $errors->first('name', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('description') }}
+            {{ Form::label('descripcion') }}
             {{ Form::text('description', $product->description, ['class' => 'form-control' . ($errors->has('description') ? ' is-invalid' : ''), 'placeholder' => 'Description']) }}
             {!! $errors->first('description', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('bar_code') }}
+            {{ Form::label('codigo_barra') }}
             {{ Form::text('bar_code', $product->bar_code, ['class' => 'form-control' . ($errors->has('bar_code') ? ' is-invalid' : ''), 'placeholder' => 'Bar Code']) }}
             {!! $errors->first('bar_code', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('price') }}
+            {{ Form::label('precio') }}
             {{ Form::text('price', $product->price, ['class' => 'form-control' . ($errors->has('price') ? ' is-invalid' : ''), 'placeholder' => 'Price']) }}
             {!! $errors->first('price', '<div class="invalid-feedback">:message</div>') !!}
         </div>
@@ -32,7 +32,7 @@
             {!! $errors->first('stock', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('id_Sales') }}
+            {{ Form::label('id_tienda') }}
             {{ Form::select('id_Sales',$sales, $product->id_Sales, ['class' => 'form-control' . ($errors->has('id_Sales') ? ' is-invalid' : ''), 'placeholder' => 'Id Sales']) }}
             {!! $errors->first('id_Sales', '<div class="invalid-feedback">:message</div>') !!}
         </div>
@@ -59,7 +59,7 @@
 
     </div>
     <div class="box-footer mt20 container-center">
-        <button type="submit" class="btn btn-primary">Submit</button>
-                            <a class="btn btn-danger" href="{{ route('products.index') }}"> Back</a>
+        <button type="submit" class="btn btn-primary">Aceptar</button>
+                            <a class="btn btn-danger" href="{{ route('products.index') }}">volver</a>
     </div>
 </div>

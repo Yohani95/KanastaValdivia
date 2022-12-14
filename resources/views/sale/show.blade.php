@@ -29,8 +29,8 @@
                             {{ $sale->direcction }}
                         </div>
                         <div class="form-group">
-                            <strong>Phone:</strong>
-                            {{ $sale->phoneg }}
+                            <strong>Phone12:</strong>
+                            {{ $sale->phone123 }}
                         </div>
 
                     </div>

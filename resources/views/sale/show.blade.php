@@ -30,7 +30,7 @@
                         </div>
                         <div class="form-group">
                             <strong>Phone:</strong>
-                            {{ $sale->phone }}
+                            {{ $sale->phoneg }}
                         </div>
 
                     </div>

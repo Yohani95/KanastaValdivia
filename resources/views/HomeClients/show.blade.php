@@ -14,7 +14,7 @@
                 <h5 class="card-title"></h5>
                 <p class="card-text">
                 <div class="form-group">
-                            <strong>Categories Id:</strong>
+                            <strong>Categoria Id:</strong>
                             {{ $product->category->name }}
                         </div>
                         <div class="form-group">

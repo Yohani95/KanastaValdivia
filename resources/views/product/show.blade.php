@@ -21,7 +21,7 @@
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Categories Id:</strong>
+                            <strong>Categoria Id:</strong>
                             {{ $product->categories_id }}
                         </div>
                         <div class="form-group">

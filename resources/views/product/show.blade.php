@@ -25,11 +25,11 @@
                             {{ $product->categories_id }}
                         </div>
                         <div class="form-group">
-                            <strong>Nombre:</strong>
+                            <strong>Name:</strong>
                             {{ $product->name }}
                         </div>
                         <div class="form-group">
-                            <strong>Descripción:</strong>
+                            <strong>Description:</strong>
                             {{ $product->description }}
                         </div>
                         <div class="form-group">

@@ -8,22 +8,22 @@
         </div>
         <div class="form-group">
             {{ Form::label('nombre') }}
-            {{ Form::text('name', $product->name, ['class' => 'form-control' . ($errors->has('name') ? ' is-invalid' : ''), 'placeholder' => 'Name']) }}
+            {{ Form::text('name', $product->name, ['class' => 'form-control' . ($errors->has('name') ? ' is-invalid' : ''), 'placeholder' => 'nombre']) }}
             {!! $errors->first('name', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('descripcion') }}
-            {{ Form::text('description', $product->description, ['class' => 'form-control' . ($errors->has('description') ? ' is-invalid' : ''), 'placeholder' => 'Description']) }}
+            {{ Form::text('description', $product->description, ['class' => 'form-control' . ($errors->has('description') ? ' is-invalid' : ''), 'placeholder' => 'descripcion']) }}
             {!! $errors->first('description', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('codigo_barra') }}
-            {{ Form::text('bar_code', $product->bar_code, ['class' => 'form-control' . ($errors->has('bar_code') ? ' is-invalid' : ''), 'placeholder' => 'Bar Code']) }}
+            {{ Form::text('bar_code', $product->bar_code, ['class' => 'form-control' . ($errors->has('bar_code') ? ' is-invalid' : ''), 'placeholder' => 'codigo barra']) }}
             {!! $errors->first('bar_code', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('precio') }}
-            {{ Form::text('price', $product->price, ['class' => 'form-control' . ($errors->has('price') ? ' is-invalid' : ''), 'placeholder' => 'Price']) }}
+            {{ Form::text('price', $product->price, ['class' => 'form-control' . ($errors->has('price') ? ' is-invalid' : ''), 'placeholder' => 'Precio']) }}
             {!! $errors->first('price', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
@@ -33,7 +33,7 @@
         </div>
         <div class="form-group">
             {{ Form::label('id_tienda') }}
-            {{ Form::select('id_Sales',$sales, $product->id_Sales, ['class' => 'form-control' . ($errors->has('id_Sales') ? ' is-invalid' : ''), 'placeholder' => 'Id Sales']) }}
+            {{ Form::select('id_Sales',$sales, $product->id_Sales, ['class' => 'form-control' . ($errors->has('id_Sales') ? ' is-invalid' : ''), 'placeholder' => 'Id tienda']) }}
             {!! $errors->first('id_Sales', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
@@ -45,13 +45,13 @@
                 <div class="form-group">
             {{ Form::label('ruta_image') }}
             <br>
-            {{ Form::file('ruta_image', ['class' => 'form-control' . ($errors->has('ruta_image') ? ' is-invalid' : ''), 'placeholder' => 'Ruta Image']) }}
+            {{ Form::file('ruta_image', ['class' => 'form-control' . ($errors->has('ruta_image') ? ' is-invalid' : ''), 'placeholder' => 'Ruta Imagen']) }}
             {!! $errors->first('ruta_image', '<div class="invalid-feedback">:message</div>') !!}
         </div>
             @else
             <div class="form-group">
             {{ Form::label('ruta_image') }}
-            {{ Form::file('ruta_image', ['class' => 'form-control' . ($errors->has('ruta_image') ? ' is-invalid' : ''), 'placeholder' => 'Ruta Image']) }}
+            {{ Form::file('ruta_image', ['class' => 'form-control' . ($errors->has('ruta_image') ? ' is-invalid' : ''), 'placeholder' => 'Ruta Imagen']) }}
             {!! $errors->first('ruta_image', '<div class="invalid-feedback">:message</div>') !!}
         </div>
             @endif

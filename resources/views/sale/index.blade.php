@@ -48,9 +48,9 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $sale->name000 }}</td>
-											<td>{{ $sale->direcction999 }}</td>
-											<td>{{ $sale->phone555 }}</td>
+											<td>{{ $sale->name}}</td>
+											<td>{{ $sale->direcction}}</td>
+											<td>{{ $sale->phone}}</td>
 
                                             <td>
                                                 <form action="{{ route('sales.destroy',$sale->id) }}" method="POST">

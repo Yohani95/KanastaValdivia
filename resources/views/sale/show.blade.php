@@ -29,13 +29,10 @@
                             {{ $sale->direcction }}
                         </div>
                         <div class="form-group">
-<<<<<<< HEAD
                             <strong>Phone:</strong>
                             {{ $sale->phone }}
-=======
                             <strong>Phone:</strong>
                             {{ $sale->phone }}
->>>>>>> parent of ddf465a (update)
                         </div>
 
                     </div>
